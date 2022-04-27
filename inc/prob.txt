@@ -1,0 +1,32 @@
+//function invalidUid($username){
+//    $result=true;
+//    if (preg_match("/^[a-zA-Z0-9]*$/",$username)){
+//        $result = false;
+//    }
+//    return $result;
+//}
+//function invalidEmail($email){
+//    $result = false;
+//    if (!filter_var($email, FILTER_VALIDATE_EMAIL)){$result = true;}
+//    return $result;
+//}
+//function pwdMatch($pwd,$rpwd){
+//    $result = false;
+//    if ($pwd !== $rpwd){
+//        $result = true;
+//    }
+//    return $result;
+//}
+==============================================================================
+    if ( invalidUid($username) !== false){
+       header ("location: ../sign-up.php?error=invalidUid");
+     exit();    
+    }
+    if (invalidEmail($email) !== false){
+        header ("location: ../sign-up.php?error=invalidEmail");
+        exit();    
+    }
+    if (pwdMatch($pwd,$rpwd) !== false){
+        header ("location: ../sign-up.php?error=passwordsdontmatch");
+        exit();    
+    }
